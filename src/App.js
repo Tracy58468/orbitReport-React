@@ -4,8 +4,6 @@ import Banner from "./components/Banner";
 import useState from "react";
 import satData from "./components/satData";
 
-
-
 function App() {
 
   const [sat, setSat] = useState(satData);
@@ -20,6 +18,7 @@ function App() {
   return (
     <div>
       <Banner />
+      {/* <Buttons /> */}
       <Buttons
         filterByType = {filterByType}
         setSat = {setSat}
