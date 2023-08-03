@@ -1,7 +1,7 @@
 import Buttons from "./components/Buttons";
 import Table from "./components/Table";
 import Banner from "./components/Banner";
-import useState from "react";
+import {useState} from "react"; // need curly braces for React imports
 import satData from "./components/satData";
 
 function App() {
