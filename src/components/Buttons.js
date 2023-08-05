@@ -1,11 +1,8 @@
 import satData from "./satData";
-import displaySats from '../App';
-import filterByType from '../App';
-import setSat from '../App';
 import id from '../App';
 
 
-const Buttons = () => {
+const Buttons = ({filterByType, setSat, displaySats}) => {
   return (
     <div>
       {displaySats.map((sat, id) => {
@@ -21,7 +18,3 @@ const Buttons = () => {
 };
 
 export default Buttons;
-
-// filterByType = {filterByType}
-// setSat = {setSat}
-// displaySats = {displaySats}  
