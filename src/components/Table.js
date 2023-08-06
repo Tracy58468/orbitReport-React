@@ -1,13 +1,13 @@
 import satData from "./satData";
-// import Buttons from "./Buttons";
+import './styling.css';
 
-const satDataList = satData.map((data, id) => (
+const satDataList = satData.map((data) => (
   <tr key = {data.id}>
     <td>{data.name}</td>
     <td>{data.type}</td>
     <td>{data.launchDate}</td>
-    {/* <td>{String(data.operational)}</td> */}
-    <td>{data.operational === true ? "Operational" : "Not"}</td>
+    {/* <td>{String(data.operational)}</td> was for checking data.operational was correct*/}
+    <td>{data.operational === true ? "Operational" : "Not Operational"}</td>
   </tr>
 ));
 
