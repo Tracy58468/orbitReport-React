@@ -15,7 +15,7 @@ function App() {
       return newSatDisplay.orbitType === currentType;
     });
     setSat(displaySats);
-    console.log(displaySats);
+    // console.log(displaySats); // so, this is working
   }
 
   return (
@@ -27,11 +27,10 @@ function App() {
         setSat = {setSat}
         displaySats = {displaySats}  
       />
-      <Table sat = {displaySats} />
+      <Table sat = {sat} />
       {/* <Table /> */}
     </div>
   );
 }
 
 export default App;
-//comment
