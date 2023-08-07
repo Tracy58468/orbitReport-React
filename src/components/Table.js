@@ -1,17 +1,19 @@
-// import satData from "./satData";
+import satData from "./satData";
 // import sat from "../App";
 import './styling.css';
 // import id from '../App';
 
-// const satDataList = sat.map((data, id) => (
-//   <tr key = {id}>
-//     <td>{data.name}</td>
-//     <td>{data.type}</td>
-//     <td>{data.launchDate}</td>
-//     {/* <td>{String(data.operational)}</td> was for checking data.operational was correct*/}
-//     <td>{data.operational === true ? "Operational" : "Not Operational"}</td>
-//   </tr>
-// )); // Why doesn't this work?
+const satDataList = satData.map((data, id) => {
+  return (
+    <tr key = {id}>
+      <td>{data.name}</td>
+      <td>{data.type}</td>
+      <td>{data.launchDate}</td>
+      {/* <td>{String(data.operational)}</td> was for checking data.operational was correct*/}
+      <td>{data.operational === true ? "Operational" : "Not Operational"}</td>
+    </tr>
+  );
+}); // Why doesn't this work?
 
 const Table = ({sat}) => {
   return (
@@ -25,20 +27,20 @@ const Table = ({sat}) => {
         </tr>
       </thead>
 
-      <tbody>
+      {/* <tbody>
         {sat.map((data, id) => (
           <tr key = {id}>
             <td>{data.name}</td>
             <td>{data.type}</td>
             <td>{data.launchDate}</td>
             {/* <td>{String(data.operational)}</td> was for checking data.operational was correct*/}
-            <td>{data.operational === true ? "Operational" : "Not Operational"}</td>
+            {/* <td>{data.operational === true ? "Operational" : "Not Operational"}</td>
           </tr>))}
-      </tbody>
+      </tbody> */} 
 
-      {/* <tbody>
+      <tbody>
         {satDataList}
-      </tbody> /*Why doesn't this work?*/}
+      </tbody> {/*Why doesn't this work?*/}
     </table>
   );
 };
